@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+@theme {
+  --color-glass: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-primary: #0A0A0A;
+  --color-accent: #D4AF37;
+  --color-accent-hover: #F1C40F;
+  --color-gold: #D4AF37;
+  --color-obsidian: #0A0A0A;
+  --color-cream: #FDFBF7;
+  --color-silver: #C0C0C0;
+  --font-sans: var(--font-outfit), var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-outfit), serif;
+}
+
+:root {
+  --background: #050505;
+  --foreground: #FDFBF7;
+  --glass-blur: 24px;
+  --primary: #0A0A0A;
+  --accent: #D4AF37;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(255, 255, 255, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(212, 175, 55, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(255, 255, 255, 0.02) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+@utility glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+@utility liquid-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #F1C40F 50%, #D4AF37 100%);
+  background-size: 200% 200%;
+  animation: liquid-flow 5s ease infinite;
+}
+
+@keyframes liquid-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Lenis Integration */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Animations */
+@utility reveal-text {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Swiper overrides */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #D4AF37 !important;
+  width: 32px !important;
+  border-radius: 4px !important;
+}
+
+.btn-primary {
+  @apply px-10 py-5 bg-[#D4AF37] text-[#0A0A0A] rounded-full font-bold transition-all duration-500 hover:bg-[#F1C40F] hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply px-10 py-5 glass-panel text-[#FDFBF7] rounded-full font-semibold transition-all duration-500 hover:bg-white/10 hover:border-[#D4AF37]/50 hover:scale-105 active:scale-95 flex items-center justify-center gap-2;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/50;
+}
+
+.text-gold-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#D4AF37] via-[#F1C40F] to-[#B8860B];
+}
