@@ -5,16 +5,16 @@ import Head from 'next/head';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  ShieldCheck, 
-  Globe, 
-  Zap, 
-  Layers, 
-  BarChart3, 
-  Clock, 
-  Lock, 
+import {
+  ArrowRight,
+  CheckCircle2,
+  ShieldCheck,
+  Globe,
+  Zap,
+  Layers,
+  BarChart3,
+  Clock,
+  Lock,
   ChevronDown,
   Menu,
   X
@@ -50,12 +50,12 @@ export default function Home() {
     // Reveal animations for all sections
     const reveals = document.querySelectorAll('.reveal-up');
     reveals.forEach((el) => {
-      gsap.fromTo(el, 
+      gsap.fromTo(el,
         { y: 50, opacity: 0 },
-        { 
-          y: 0, 
-          opacity: 1, 
-          duration: 1.2, 
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.2,
           ease: 'power4.out',
           scrollTrigger: {
             trigger: el,
@@ -100,13 +100,13 @@ export default function Home() {
           <motion.div style={{ opacity, scale }} className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border-gold/20 mb-8 animate-pulse">
               <span className="w-2 h-2 rounded-full bg-gold" />
-              <span className="text-xs font-bold tracking-widest uppercase text-gold">Entering Philippines • UK Born</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-gold">Modern Financial Infrastructure</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-[1.1]">
               The Finance <span className="text-gold-gradient">Operations</span> Engine
             </h1>
-            
+
             <p className="text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed">
               Orchestrate global business payments with programmable logic, real-time audit trails, and embedded compliance. Move money at scale, without the manual friction.
             </p>
@@ -115,8 +115,8 @@ export default function Home() {
               <GlassButton onClick={() => window.location.href = '/waitlist'} className="w-full sm:w-auto text-lg px-12 py-6">
                 Join the Exclusive Waitlist <ArrowRight className="w-5 h-5" />
               </GlassButton>
-              <GlassButton 
-                variant="secondary" 
+              <GlassButton
+                variant="secondary"
                 className="w-full sm:w-auto text-lg px-12 py-6"
                 onClick={() => window.location.href = '/product'}
               >
@@ -128,13 +128,13 @@ export default function Home() {
           {/* Hero Visual */}
           <div className="mt-20 w-full max-w-6xl mx-auto relative px-4">
             <div className="glass-card rounded-2xl overflow-hidden aspect-video relative group border-white/10 shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=2000" 
-                alt="Purside Dashboard Preview" 
+              <img
+                src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=2000"
+                alt="Purside Dashboard Preview"
                 className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
-              
+
               {/* Overlay elements for "Live" feel */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
                 <div className="w-20 h-20 rounded-full bg-gold/20 backdrop-blur-xl border border-gold/40 flex items-center justify-center cursor-pointer group/play">
@@ -147,7 +147,7 @@ export default function Home() {
             </div>
 
             {/* Floating UI Elements */}
-            <motion.div 
+            <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
@@ -164,7 +164,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.7 }}
@@ -192,7 +192,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-3">
               <Globe className="w-6 h-6 text-gold" />
-              <span className="font-bold tracking-widest text-xs uppercase">UK Origins • PH Ready</span>
+              <span className="font-bold tracking-widest text-xs uppercase">Built for Global Payouts</span>
             </div>
             <div className="flex items-center gap-3">
               <Lock className="w-6 h-6 text-gold" />
@@ -214,7 +214,7 @@ export default function Home() {
               <p className="text-lg text-white/60 mb-10 leading-relaxed">
                 Fragmented workflows, spreadsheet errors, lack of visibility, and manual reconciliation. Most businesses are moving money with 20th-century tools in a 21st-century economy.
               </p>
-              
+
               <ul className="space-y-6">
                 {[
                   "Disconnected payment rails and banks",
@@ -292,25 +292,25 @@ export default function Home() {
         {/* Autopilot Section */}
         <SectionWrapper id="autopilot" className="bg-[#0A0A0A] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
-             <div className="absolute inset-0 bg-gradient-to-l from-gold/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-l from-gold/30 to-transparent" />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1">
-               <div className="glass-card aspect-square rounded-3xl overflow-hidden relative group">
-                  <img 
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" 
-                    alt="Purside Autopilot" 
-                    className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-1000"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-32 h-32 rounded-full border border-gold/50 flex items-center justify-center animate-spin-slow">
-                      <div className="w-24 h-24 rounded-full border border-gold flex items-center justify-center">
-                        <Zap className="w-10 h-10 text-gold" />
-                      </div>
+              <div className="glass-card aspect-square rounded-3xl overflow-hidden relative group">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000"
+                  alt="Purside Autopilot"
+                  className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-32 h-32 rounded-full border border-gold/50 flex items-center justify-center animate-spin-slow">
+                    <div className="w-24 h-24 rounded-full border border-gold flex items-center justify-center">
+                      <Zap className="w-10 h-10 text-gold" />
                     </div>
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
 
             <div className="order-1 lg:order-2 reveal-up">
@@ -319,7 +319,7 @@ export default function Home() {
               <p className="text-lg text-white/60 mb-10 leading-relaxed">
                 Intelligent workflow automation that handles the heavy lifting. Routing, retry logic, reconciliation, and exception management—all handled by our smart engine.
               </p>
-              
+
               <div className="space-y-6">
                 {[
                   { title: "Smart Routing", sub: "Automatic selection of the most efficient rail." },
@@ -395,95 +395,95 @@ export default function Home() {
         {/* How it Works */}
         <SectionWrapper id="how-it-works" className="bg-[#080808]">
           <div className="max-w-4xl mx-auto">
-             <div className="text-center mb-20 reveal-up">
-                <h2 className="text-gold uppercase tracking-[0.3em] font-bold text-sm mb-6">Step by Step</h2>
-                <h3 className="text-4xl md:text-6xl font-bold mb-8">Setup in <span className="text-gold-gradient">Minutes</span>.</h3>
-             </div>
+            <div className="text-center mb-20 reveal-up">
+              <h2 className="text-gold uppercase tracking-[0.3em] font-bold text-sm mb-6">Step by Step</h2>
+              <h3 className="text-4xl md:text-6xl font-bold mb-8">Setup in <span className="text-gold-gradient">Minutes</span>.</h3>
+            </div>
 
-             <div className="space-y-24 relative">
-                <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/5 -translate-x-1/2 hidden md:block" />
-                
-                {[
-                  { step: "01", title: "Connect Your Rails", desc: "Integrate your existing bank accounts and payment rails into Purside's orchestration layer." },
-                  { step: "02", title: "Define Your Logic", desc: "Use our visual builder to set up rules, approvals, and automation workflows." },
-                  { step: "03", title: "Go Live & Automate", desc: "Start moving money with full confidence, visibility, and total autopilot control." }
-                ].map((item, i) => (
-                  <div key={i} className={cn("relative flex flex-col md:flex-row items-center gap-12 reveal-up", i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse")}>
-                    <div className="flex-1 text-center md:text-left">
-                      <div className="text-6xl font-black text-white/5 mb-4">{item.step}</div>
-                      <h4 className="text-3xl font-bold mb-4">{item.title}</h4>
-                      <p className="text-white/50 leading-relaxed">{item.desc}</p>
-                    </div>
-                    
-                    <div className="z-10 w-20 h-20 rounded-full bg-[#050505] border-2 border-gold/30 flex items-center justify-center">
-                       <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold font-bold">
-                         {item.step}
-                       </div>
-                    </div>
-                    
-                    <div className="flex-1 hidden md:block" />
+            <div className="space-y-24 relative">
+              <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/5 -translate-x-1/2 hidden md:block" />
+
+              {[
+                { step: "01", title: "Create Your Treasury Account", desc: "Access local and international payment rails through a unified infrastructure layer." },
+                { step: "02", title: "Define Your Logic", desc: "Use our visual builder to set up rules, approvals, and automation workflows." },
+                { step: "03", title: "Go Live & Automate", desc: "Start moving money with full confidence, visibility, and total autopilot control." }
+              ].map((item, i) => (
+                <div key={i} className={cn("relative flex flex-col md:flex-row items-center gap-12 reveal-up", i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse")}>
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="text-6xl font-black text-white/5 mb-4">{item.step}</div>
+                    <h4 className="text-3xl font-bold mb-4">{item.title}</h4>
+                    <p className="text-white/50 leading-relaxed">{item.desc}</p>
                   </div>
-                ))}
-             </div>
+
+                  <div className="z-10 w-20 h-20 rounded-full bg-[#050505] border-2 border-gold/30 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold font-bold">
+                      {item.step}
+                    </div>
+                  </div>
+
+                  <div className="flex-1 hidden md:block" />
+                </div>
+              ))}
+            </div>
           </div>
         </SectionWrapper>
 
         {/* Waitlist Section */}
         <SectionWrapper className="relative">
-           <div className="glass-card p-12 md:p-24 rounded-[40px] text-center max-w-6xl mx-auto relative overflow-hidden border-gold/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent pointer-events-none" />
-              
-              <div className="relative z-10">
-                <h2 className="text-gold uppercase tracking-[0.3em] font-bold text-sm mb-6">Exclusive Access</h2>
-                <h3 className="text-4xl md:text-7xl font-bold mb-8">Join the Founding <span className="text-gold-gradient">Access</span>.</h3>
-                <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed">
-                  Be among the first to experience the future of finance operations. Exclusive benefits for founding waitlist members.
-                </p>
+          <div className="glass-card p-12 md:p-24 rounded-[40px] text-center max-w-6xl mx-auto relative overflow-hidden border-gold/20">
+            <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent pointer-events-none" />
 
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
-                  <input 
-                    type="email" 
-                    placeholder="Enter your business email" 
-                    className="w-full px-6 py-4 rounded-full bg-white/5 border border-white/10 focus:border-gold outline-none transition-all"
-                  />
-                  <GlassButton className="w-full md:w-auto whitespace-nowrap">
-                    Join Waitlist
-                  </GlassButton>
-                </div>
-                
-                <p className="mt-8 text-white/40 text-sm">
-                  Limited spots available. Secure your place in the queue.
-                </p>
+            <div className="relative z-10">
+              <h2 className="text-gold uppercase tracking-[0.3em] font-bold text-sm mb-6">Exclusive Access</h2>
+              <h3 className="text-4xl md:text-7xl font-bold mb-8">Join the Founding <span className="text-gold-gradient">Access</span>.</h3>
+              <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Be among the first to experience the future of finance operations. Exclusive benefits for founding waitlist members.
+              </p>
+
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your business email"
+                  className="w-full px-6 py-4 rounded-full bg-white/5 border border-white/10 focus:border-gold outline-none transition-all"
+                />
+                <GlassButton className="w-full md:w-auto whitespace-nowrap">
+                  Join Waitlist
+                </GlassButton>
               </div>
-           </div>
+
+              <p className="mt-8 text-white/40 text-sm">
+                Limited spots available. Secure your place in the queue.
+              </p>
+            </div>
+          </div>
         </SectionWrapper>
 
         {/* FAQ Section */}
         <SectionWrapper className="bg-[#050505]">
           <div className="max-w-3xl mx-auto">
-             <div className="text-center mb-16 reveal-up">
-                <h2 className="text-gold uppercase tracking-[0.3em] font-bold text-sm mb-6">Common Questions</h2>
-                <h3 className="text-4xl font-bold">Everything You Need to <span className="text-gold-gradient">Know</span>.</h3>
-             </div>
+            <div className="text-center mb-16 reveal-up">
+              <h2 className="text-gold uppercase tracking-[0.3em] font-bold text-sm mb-6">Common Questions</h2>
+              <h3 className="text-4xl font-bold">Everything You Need to <span className="text-gold-gradient">Know</span>.</h3>
+            </div>
 
-             <div className="space-y-4">
-                {[
-                  { q: "Is Purside a bank?", a: "No, Purside is a finance operations engine. We partner with regulated banks to provide underlying financial services while we provide the orchestration and automation layer." },
-                  { q: "When will the product launch in the Philippines?", a: "We are currently in the final stages of development and regulatory alignment. Join the waitlist to receive immediate updates on our beta launch." },
-                  { q: "Who is this product for?", a: "Purside is built for businesses that move money at scale, including payroll-heavy organizations, marketplaces, staffing firms, and B2B agencies." },
-                  { q: "How secure is Purside?", a: "Security and compliance are at our core. We use bank-grade encryption and follow institutional-level compliance protocols in both the UK and Philippines." }
-                ].map((item, i) => (
-                  <div key={i} className="glass-card p-6 rounded-2xl group cursor-pointer hover:border-gold/20">
-                    <div className="flex items-center justify-between">
-                      <p className="font-bold text-lg">{item.q}</p>
-                      <ChevronDown className="w-5 h-5 text-gold group-hover:rotate-180 transition-transform duration-300" />
-                    </div>
-                    <div className="mt-4 max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500">
-                      <p className="text-white/60 leading-relaxed">{item.a}</p>
-                    </div>
+            <div className="space-y-4">
+              {[
+                { q: "Is Purside a bank?", a: "No, Purside is a finance operations engine. We partner with regulated banks to provide underlying financial services while we provide the orchestration and automation layer." },
+                { q: "When will the product launch in the Philippines?", a: "We are currently in the final stages of development and regulatory alignment. Join the waitlist to receive immediate updates on our beta launch." },
+                { q: "Who is this product for?", a: "Purside is built for businesses that move money at scale, including payroll-heavy organizations, marketplaces, staffing firms, and B2B agencies." },
+                { q: "How secure is Purside?", a: "Security and compliance are at our core. We use bank-grade encryption and follow institutional-level compliance protocols in Philippines." }
+              ].map((item, i) => (
+                <div key={i} className="glass-card p-6 rounded-2xl group cursor-pointer hover:border-gold/20">
+                  <div className="flex items-center justify-between">
+                    <p className="font-bold text-lg">{item.q}</p>
+                    <ChevronDown className="w-5 h-5 text-gold group-hover:rotate-180 transition-transform duration-300" />
                   </div>
-                ))}
-             </div>
+                  <div className="mt-4 max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500">
+                    <p className="text-white/60 leading-relaxed">{item.a}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </SectionWrapper>
 
