@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import gsap from 'gsap';
@@ -42,6 +42,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const { openWaitlist } = useStore();
   const heroRef = useRef(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95]);
@@ -60,7 +61,7 @@ export default function Home() {
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
-            toggleActions: 'play none none none',
+            once: true,
           }
         }
       );
@@ -129,7 +130,7 @@ export default function Home() {
           <div className="mt-20 w-full max-w-6xl mx-auto relative px-4">
             <div className="glass-card rounded-2xl overflow-hidden aspect-video relative group border-white/10 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=2000"
+                src="/vision.png"
                 alt="Purside Dashboard Preview"
                 className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"
               />
@@ -176,7 +177,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-xs text-white/50">Smart Routing Active</p>
-                  <p className="text-sm font-bold">UK ↔ PH Rail</p>
+                  <p className="text-sm font-bold">UK â†” PH Rail</p>
                 </div>
               </div>
             </motion.div>
@@ -299,7 +300,7 @@ export default function Home() {
             <div className="order-2 lg:order-1">
               <div className="glass-card aspect-square rounded-3xl overflow-hidden relative group">
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000"
+                  src="/dashboard.png"
                   alt="Purside Autopilot"
                   className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-1000"
                 />
@@ -317,7 +318,7 @@ export default function Home() {
               <h2 className="text-gold uppercase tracking-[0.3em] font-bold text-sm mb-6">Purside Autopilot</h2>
               <h3 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">Finance Operations on <span className="text-gold-gradient">Autopilot</span>.</h3>
               <p className="text-lg text-white/60 mb-10 leading-relaxed">
-                Intelligent workflow automation that handles the heavy lifting. Routing, retry logic, reconciliation, and exception management—all handled by our smart engine.
+                Intelligent workflow automation that handles the heavy lifting. Routing, retry logic, reconciliation, and exception managementâ€”all handled by our smart engine.
               </p>
 
               <div className="space-y-6">
@@ -473,12 +474,16 @@ export default function Home() {
                 { q: "Who is this product for?", a: "Purside is built for businesses that move money at scale, including payroll-heavy organizations, marketplaces, staffing firms, and B2B agencies." },
                 { q: "How secure is Purside?", a: "Security and compliance are at our core. We use bank-grade encryption and follow institutional-level compliance protocols in Philippines." }
               ].map((item, i) => (
-                <div key={i} className="glass-card p-6 rounded-2xl group cursor-pointer hover:border-gold/20">
+                <div 
+                  key={i} 
+                  className="glass-card p-6 rounded-2xl group cursor-pointer hover:border-gold/20"
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                >
                   <div className="flex items-center justify-between">
                     <p className="font-bold text-lg">{item.q}</p>
-                    <ChevronDown className="w-5 h-5 text-gold group-hover:rotate-180 transition-transform duration-300" />
+                    <ChevronDown className={cn("w-5 h-5 text-gold transition-transform duration-300", openFaq === i ? "rotate-180" : "group-hover:rotate-180")} />
                   </div>
-                  <div className="mt-4 max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500">
+                  <div className={cn("mt-4 overflow-hidden transition-all duration-500", openFaq === i ? "max-h-40" : "max-h-0 group-hover:max-h-40")}>
                     <p className="text-white/60 leading-relaxed">{item.a}</p>
                   </div>
                 </div>

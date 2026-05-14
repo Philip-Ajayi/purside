@@ -40,8 +40,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex items-center justify-between glass-panel px-4 md:px-6 py-3 rounded-full relative z-50">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gold rounded-lg flex items-center justify-center font-bold text-black">P</div>
-            <span className="text-xl font-bold tracking-tight text-white">PURSIDE</span>
+            <img src="/logo.png" alt="Purside Logo" className="h-8 w-auto" />
           </a>
 
           {/* Desktop Links */}

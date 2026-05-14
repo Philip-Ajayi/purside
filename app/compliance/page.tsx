@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -53,7 +53,7 @@ export default function CompliancePage() {
                scrollTrigger: {
                   trigger: el,
                   start: 'top 85%',
-                  toggleActions: 'play none none none',
+                  once: true,
                }
             }
          );

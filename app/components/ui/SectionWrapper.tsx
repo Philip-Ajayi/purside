@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { ReactNode, useEffect, useRef } from 'react';
 import gsap from 'gsap';
@@ -35,7 +35,7 @@ export default function SectionWrapper({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 80%',
-          toggleActions: 'play none none none',
+          once: true,
         },
       });
     }, sectionRef);

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -56,7 +56,7 @@ export default function SolutionsPage() {
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
-            toggleActions: 'play none none none',
+            once: true,
           }
         }
       );
@@ -101,7 +101,7 @@ export default function SolutionsPage() {
         {/* 1. PAYROLL */}
         <SectionWrapper id="payroll" className="bg-[#080808] py-32 border-y border-white/5">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-              <div className="reveal-up sticky top-32">
+              <div className="reveal-up relative lg:sticky top-32">
                  <div className="flex items-center gap-4 mb-8">
                     <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold">
                        <Users className="w-8 h-8" />
@@ -183,7 +183,7 @@ export default function SolutionsPage() {
         {/* 2. VENDORS */}
         <SectionWrapper id="vendors" className="py-32">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start lg:flex-row-reverse">
-              <div className="reveal-up sticky top-32 lg:order-2">
+              <div className="reveal-up relative lg:sticky top-32 lg:order-2">
                  <div className="flex items-center gap-4 mb-8">
                     <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold">
                        <Truck className="w-8 h-8" />
@@ -253,7 +253,7 @@ export default function SolutionsPage() {
         {/* 3. CONTRACTORS */}
         <SectionWrapper id="contractors" className="bg-[#080808] py-32 border-y border-white/5">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-              <div className="reveal-up sticky top-32">
+              <div className="reveal-up relative lg:sticky top-32">
                  <div className="flex items-center gap-4 mb-8">
                     <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold">
                        <Briefcase className="w-8 h-8" />
@@ -323,7 +323,7 @@ export default function SolutionsPage() {
         {/* 4. MARKETPLACES */}
         <SectionWrapper id="marketplaces" className="py-32">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start lg:flex-row-reverse">
-              <div className="reveal-up sticky top-32 lg:order-2">
+              <div className="reveal-up relative lg:sticky top-32 lg:order-2">
                  <div className="flex items-center gap-4 mb-8">
                     <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold">
                        <Building2 className="w-8 h-8" />
@@ -391,7 +391,7 @@ export default function SolutionsPage() {
         {/* 5. STAFFING FIRMS */}
         <SectionWrapper id="staffing" className="bg-[#080808] py-32 border-y border-white/5">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-              <div className="reveal-up sticky top-32">
+              <div className="reveal-up relative lg:sticky top-32">
                  <div className="flex items-center gap-4 mb-8">
                     <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold">
                        <Layers className="w-8 h-8" />
@@ -451,7 +451,7 @@ export default function SolutionsPage() {
         {/* 6. AGENCIES & 7. OUTSOURCING */}
         <SectionWrapper id="agencies" className="py-32">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start lg:flex-row-reverse">
-              <div className="reveal-up sticky top-32 lg:order-2">
+              <div className="reveal-up relative lg:sticky top-32 lg:order-2">
                  <div className="flex items-center gap-4 mb-8">
                     <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold">
                        <Building2 className="w-8 h-8" />

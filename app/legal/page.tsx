@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   Shield,
+  CreditCard,
   Lock,
   Scale,
   FileText,
@@ -94,7 +95,7 @@ export default function LegalPage() {
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
-            toggleActions: 'play none none none',
+            once: true,
           }
         }
       );
@@ -171,6 +172,9 @@ export default function LegalPage() {
                 </div>
                 <div className="flex items-center gap-2 font-bold tracking-widest text-xs uppercase">
                   <Lock className="w-5 h-5" /> AES-256 Standard
+                </div>
+                <div className="flex items-center gap-2 font-bold tracking-widest text-xs uppercase">
+                  <CreditCard className="w-5 h-5" /> PCI DSS
                 </div>
                 <div className="flex items-center gap-2 font-bold tracking-widest text-xs uppercase">
                   <Eye className="w-5 h-5" /> Zero-Trust Access

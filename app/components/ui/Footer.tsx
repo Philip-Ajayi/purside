@@ -36,8 +36,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="col-span-1 lg:col-span-2 space-y-8">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gold rounded-xl flex items-center justify-center font-bold text-black text-xl">P</div>
-              <span className="text-2xl font-bold tracking-tight text-white">PURSIDE</span>
+              <img src="/logo.png" alt="Purside Logo" className="h-10 w-auto" />
             </div>
             <p className="text-white/30 text-sm max-w-xs leading-relaxed">
               Institutional-grade financial orchestration engine. Infrastructure for modern payments in the Philippines.
@@ -99,7 +98,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] uppercase tracking-[0.4em] text-white/10 font-bold">
-            © 2026 Purside Ltd • Orchestrating the Future
+            Â© 2026 Purside Ltd â€¢ Orchestrating the Future
           </p>
           <div className="flex gap-8">
             <div className="flex items-center gap-2 px-4 py-1 rounded-full bg-green-500/5 border border-green-500/10 text-[10px] font-bold text-green-500/60 uppercase tracking-widest">

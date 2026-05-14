@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -52,7 +52,7 @@ export default function ContactPage() {
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
-            toggleActions: 'play none none none',
+            once: true,
           }
         }
       );
@@ -186,7 +186,7 @@ export default function ContactPage() {
                        <MapPin className="w-5 h-5 text-gold group-hover:scale-110 transition-transform" />
                        <div className="flex flex-col">
                           <span className="text-[10px] uppercase tracking-widest text-white/20">Global Presence</span>
-                          <span>London • Manila</span>
+                          <span>London â€¢ Manila</span>
                        </div>
                     </div>
                  </div>

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -46,7 +46,7 @@ export default function WaitlistPage() {
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
-            toggleActions: 'play none none none',
+            once: true,
           }
         }
       );
@@ -299,7 +299,7 @@ export default function WaitlistPage() {
                        </GlassButton>
                        
                        <p className="text-center text-[10px] text-white/20 uppercase tracking-[0.2em] mt-6">
-                          Strictly Invite-Only • Limited Slots Available
+                          Strictly Invite-Only â€¢ Limited Slots Available
                        </p>
                     </div>
                  </form>

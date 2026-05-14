@@ -59,7 +59,7 @@ export default function ProductPage() {
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
-            toggleActions: 'play none none none',
+            once: true,
           }
         }
       );
@@ -106,21 +106,21 @@ export default function ProductPage() {
           </div>
 
           <div className="w-full max-w-6xl mx-auto mt-20 relative px-4">
-             <div className="glass-card aspect-[21/9] rounded-[40px] overflow-hidden relative border-white/5 shadow-2xl">
+             <div className="glass-card aspect-[4/3] md:aspect-[21/9] rounded-3xl md:rounded-[40px] overflow-hidden relative border-white/5 shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000" 
+                  src="/dashboard.png" 
                   alt="Purside Product Overview" 
                   className="w-full h-full object-cover opacity-40 parallax-img"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
-                <div className="absolute bottom-12 left-12 right-12 flex flex-col md:flex-row justify-between items-end gap-8">
+                <div className="absolute bottom-6 left-6 right-6 md:bottom-12 md:left-12 md:right-12 flex flex-col md:flex-row justify-between md:items-end gap-4 md:gap-8">
                    <div className="text-left">
-                      <h2 className="text-3xl font-bold mb-2">Finance OS</h2>
-                      <p className="text-white/40 text-sm">Centralized control for decentralized rails.</p>
+                      <h2 className="text-2xl md:text-3xl font-bold mb-1 md:mb-2">Finance OS</h2>
+                      <p className="text-white/40 text-xs md:text-sm">Centralized control for decentralized rails.</p>
                    </div>
-                   <div className="flex gap-4">
-                      <div className="px-6 py-3 glass-panel rounded-xl text-gold font-bold">100+ INTEGRATIONS</div>
-                      <div className="px-6 py-3 glass-panel rounded-xl text-gold font-bold">99.9% UPTIME</div>
+                   <div className="flex flex-wrap gap-2 md:gap-4">
+                      <div className="px-4 py-2 md:px-6 md:py-3 glass-panel rounded-lg md:rounded-xl text-gold font-bold text-xs md:text-base">100+ INTEGRATIONS</div>
+                      <div className="px-4 py-2 md:px-6 md:py-3 glass-panel rounded-lg md:rounded-xl text-gold font-bold text-xs md:text-base">99.9% UPTIME</div>
                    </div>
                 </div>
              </div>
