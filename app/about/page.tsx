@@ -157,7 +157,13 @@ export default function AboutPage() {
                   </p>
                </div>
 
-               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal-up">
+               <motion.div
+                     initial={{ opacity: 0, y: 40 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true }}
+                     transition={{ duration: 0.8 }}
+                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+               >
                   {[
                      {
                         title: "Digital Acceleration",
@@ -183,7 +189,7 @@ export default function AboutPage() {
                         <p className="text-white/30 text-sm leading-relaxed">{card.desc}</p>
                      </div>
                   ))}
-               </div>
+               </motion.div>
             </SectionWrapper>
 
             {/* Vision & Expansion */}
@@ -209,7 +215,13 @@ export default function AboutPage() {
                         ))}
                      </div>
                   </div>
-                  <div className="lg:order-1 reveal-up">
+                  <motion.div
+                     initial={{ opacity: 0, y: 40 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true }}
+                     transition={{ duration: 0.8 }}
+                     className="lg:order-1"
+                  >
                      <div className="relative h-[500px] flex items-center justify-center">
                         <Globe className="w-64 h-64 text-gold/10 animate-spin-slow absolute" />
                         <Compass className="w-32 h-32 text-gold animate-pulse relative z-10" />
@@ -217,7 +229,7 @@ export default function AboutPage() {
                         <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-gold rounded-full blur-[2px] animate-ping" />
                         <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-gold/50 rounded-full blur-[2px] animate-bounce" />
                      </div>
-                  </div>
+                  </motion.div>
                </div>
             </SectionWrapper>
 
