@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -127,7 +127,13 @@ export default function AboutPage() {
                         </div>
                      </div>
                   </div>
-                  <div className="relative h-[600px] reveal-up">
+                  <motion.div
+                     initial={{ opacity: 0, y: 40 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true }}
+                     transition={{ duration: 0.8 }}
+                     className="relative h-[600px]"
+                  >
                      <div className="absolute inset-0 bg-gold/5 blur-[120px] rounded-full animate-pulse" />
                      <div className="glass-card h-full p-12 rounded-[60px] border-white/5 relative overflow-hidden flex flex-col justify-end">
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#050505]/80" />
@@ -137,7 +143,7 @@ export default function AboutPage() {
                            <div className="h-1 w-20 bg-gold rounded-full" />
                         </div>
                      </div>
-                  </div>
+                  </motion.div>
                </div>
             </SectionWrapper>
 
