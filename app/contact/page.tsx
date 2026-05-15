@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -193,7 +193,12 @@ export default function ContactPage() {
               </div>
 
               {/* Contact Form */}
-              <div className="reveal-up">
+              <motion.div
+               initial={{ opacity: 0, y: 40 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.8 }}
+               >
                  <form onSubmit={handleSubmit} className="glass-card p-10 md:p-14 rounded-[40px] border-white/10 relative overflow-hidden bg-gradient-to-br from-white/[0.02] to-transparent">
                     <div className="relative z-10 space-y-6">
                        <div className="space-y-2">
@@ -228,7 +233,7 @@ export default function ContactPage() {
                        </GlassButton>
                     </div>
                  </form>
-              </div>
+              </motion.div>
            </div>
         </SectionWrapper>
 
