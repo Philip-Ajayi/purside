@@ -43,7 +43,7 @@ const faqs = [
   {
     category: 'product',
     q: "In which markets is Purside currently available?",
-    a: "Purside is currently focused on the Philippines market, with specialized domestic rail integrations (InstaPay, PesoNet). We are planning regional expansion into Southeast Asia in 2027."
+    a: "Purside is preparing to launch in the Philippines market, starting with local payment integrations like InstaPay and PesoNet. We will begin beta testing soon, with plans to expand across Southeast Asia in the future."
   },
   {
     category: 'product',
@@ -58,7 +58,7 @@ const faqs = [
   {
     category: 'banking',
     q: "Where are client funds held?",
-    a: "All client funds are held in segregated, protected accounts at our Tier-1 regulated bank partners. Purside never touches the funds directly; we only provide the orchestration logic."
+    a: "All client funds will be held in segregated, protected accounts at our Tier-1 regulated bank partners. Purside never touches the funds directly; we only provide the orchestration logic."
   },
   {
     category: 'security',
